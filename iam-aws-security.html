@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog | MySite</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="content">
+        <h1>My Blog</h1>
+        <div class="blog-post">
+            <h2>Why IAM is the Bedrock of AWS Security</h2>
+            <p class="date">March 11, 2025</p>
+            <p>As a security architect, I’ve seen firsthand how the cloud amplifies both opportunity and risk. Amazon Web Services (AWS) powers countless workloads, but with great power comes great responsibility—especially when it comes to controlling access. Enter Identity and Access Management (IAM), the unsung hero of AWS security. It’s not just a feature; it’s the foundation for protecting your cloud environment.</p>
+            <p>IAM governs who (or what) can do what in your AWS account. Think of it as the gatekeeper: without it, your resources—S3 buckets, EC2 instances, Lambda functions—are vulnerable to unauthorized access. In my six years securing systems, I’ve learned that misconfigured IAM is often the root cause of breaches. A single over-permissive policy can expose sensitive data or let an attacker escalate privileges.</p>
+            <p>So, why is IAM so critical? First, it enforces the principle of least privilege. By default, AWS denies all access unless explicitly allowed. With IAM, you can craft policies that grant only the permissions users or services need—nothing more. For example, a developer might need read/write access to an S3 bucket but not the ability to delete it. IAM lets you define that granularity.</p>
+            <p>Second, IAM scales with complexity. In a sprawling cloud environment, you’re not just managing humans—think applications, bots, and third-party integrations. IAM roles and temporary credentials (via AWS Security Token Service) ensure these entities get just-in-time access without hardcoding keys. It’s a game-changer for automation and security.</p>
+            <p>Finally, IAM is your audit trail. With tools like AWS CloudTrail tied to IAM, you can track who accessed what and when. Spot an anomaly—like an unexpected API call? You can trace it back to the IAM user or role and tighten controls.</p>
+            <p>But IAM isn’t foolproof. Overly broad policies, unused credentials, or neglecting multi-factor authentication (MFA) can undermine it. My advice? Start with a strong IAM strategy: enable MFA everywhere, regularly audit permissions, and use AWS’s IAM Access Analyzer to spot gaps. It’s not glamorous, but it’s the difference between a secure cloud and a headline-making breach.</p>
+            <p>Going forward, I’ll dive deeper into IAM best practices and other AWS security topics on this blog. Stay tuned for more ways to lock down your cloud environment!</p>
+            <p><a href="index.html" class="button">Back to Home</a></p>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Settings</a>
+    </div>
+</body>
+</html>
