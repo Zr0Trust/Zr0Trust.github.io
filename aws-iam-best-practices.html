@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AWS IAM Best Practices | MySite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="content">
+        <h1 class="logo">My Blog</h1>
+        <div class="blog-post">
+            <h2>AWS IAM Best Practices: Securing Your Cloud Like a Pro</h2>
+            <p class="date">March 12, 2025</p>
+            <p>In my last post, I outlined why Identity and Access Management (IAM) is the bedrock of AWS security. Now, let’s get practical. After six years as a security architect, I’ve distilled some hard-earned IAM best practices that can lock down your AWS environment without slowing you down. Here’s how to secure your cloud like a pro.</p>
+            <p><strong>1. Enable MFA Everywhere:</strong> Multi-factor authentication (MFA) is non-negotiable. Root accounts, IAM users, even programmatic access—turn it on. AWS makes it easy with virtual MFA devices or hardware tokens. A breached password without MFA is a skeleton key to your cloud.</p>
+            <p><strong>2. Use Roles, Not Keys:</strong> Hardcoded access keys are a liability. Instead, lean on IAM roles with temporary credentials via AWS Security Token Service (STS). For EC2 instances, Lambda functions, or cross-account access, roles reduce risk and simplify rotation. Bonus: no more key leaks in git commits.</p>
+            <p><strong>3. Least Privilege is Your Mantra:</strong> Start with deny-by-default and grant only what’s needed. Use AWS-managed policies where possible, but don’t shy away from custom JSON when precision matters. For example, restrict S3 access to specific buckets and actions—no wildcards like <code>"*"</code> unless you’re courting disaster.</p>
+            <p><strong>4. Audit Regularly with IAM Access Analyzer:</strong> This tool is a gem. It flags unused roles, over-permissive policies, and external access risks. Run it weekly, and pair it with CloudTrail logs to spot anomalies—like an IAM user suddenly hitting APIs they’ve never touched.</p>
+            <p><strong>5. Rotate Credentials Like Clockwork:</strong> Stale access keys are a silent threat. Set a 90-day rotation policy for users and automate it with AWS Secrets Manager if you can. For the root account, lock it away after initial setup—use it only for emergencies.</p>
+            <p><strong>6. Tag and Organize:</strong> IAM isn’t just about permissions—it’s about management. Tag users, roles, and groups (e.g., <code>Team:Dev</code>, <code>Env:Prod</code>) to track who owns what. It’s a lifesaver when your account scales.</p>
+            <p>These practices aren’t theoretical—they’re battle-tested. A client once avoided a breach because we caught an unused role with S3 write access via Access Analyzer. Small wins add up. Next time, I’ll explore how IAM ties into a zero trust model—stay tuned!</p>
+            <p><a href="blog.html" class="button">Back to Blog</a></p>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Settings</a>
+    </div>
+</body>
+</html>
