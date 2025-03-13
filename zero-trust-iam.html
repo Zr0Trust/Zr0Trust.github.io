@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How IAM Fuels Zero Trust in AWS | MySite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="content">
+        <h1 class="logo">My Blog</h1>
+        <div class="blog-post">
+            <h2>How IAM Fuels a Zero Trust Model in AWS</h2>
+            <p class="date">March 13, 2025</p>
+            <p>Zero trust isn’t just a trend—it’s a fundamental shift in cybersecurity thinking. As a security architect with over six years of experience, I’ve watched perimeter-based security fade in relevance as cloud adoption soars. AWS Identity and Access Management (IAM) steps up as a critical tool to enable zero trust in the cloud. Here’s how it powers the “never trust, always verify” approach.</p>
+            <p><strong>Zero Trust Basics:</strong> Zero trust assumes no one—user, device, or service—is inherently trustworthy, whether inside or outside your network. Every access request requires authentication, authorization, and encryption. IAM aligns perfectly, serving as the backbone for securing AWS resources.</p>
+            <p><strong>1. Robust Identity Controls:</strong> IAM manages *who* gets access through users, roles, and groups. Multi-factor authentication (MFA) adds an extra verification step, ensuring compromised credentials alone can’t unlock your environment. This is zero trust’s identity-first principle in action.</p>
+            <p><strong>2. Precision with Least Privilege:</strong> Zero trust demands minimal access. IAM’s fine-grained policies let you specify exact permissions—like <code>"s3:GetObject"</code> for one bucket—avoiding broad access. Temporary credentials via AWS Security Token Service (STS) take it further, granting just-in-time access that expires quickly.</p>
+            <p><strong>3. Ongoing Oversight:</strong> Zero trust thrives on continuous validation. IAM integrates with AWS CloudTrail and Config to log every action, letting you monitor access patterns. If something looks off—like an unusual API call—you’ve got the data to dig in and adjust.</p>
+            <p><strong>4. Workload Isolation:</strong> In a zero trust world, segmentation is key. IAM roles tailored to specific services (e.g., Lambda, EC2) limit what each component can touch. Pair this with resource-based policies (like S3 bucket policies), and you’ve built micro-boundaries across your AWS setup.</p>
+            <p><strong>Why It Matters:</strong> IAM’s flexibility makes zero trust practical in AWS. It’s not about locking everything down to the point of paralysis—it’s about enabling secure, scalable access. A well-tuned IAM setup can support a multi-tenant app or a sprawling enterprise with equal precision.</p>
+            <p>IAM is a cornerstone of zero trust, but it’s not the full picture—tools like VPCs and encryption play their part too. Next time, I’ll explore how AWS Network Firewall fits into this model. Stay tuned!</p>
+            <p><a href="blog.html" class="button">Back to Blog</a></p>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Settings</a>
+    </div>
+</body>
+</html>
